@@ -5,11 +5,10 @@ print("////////////////////////////////////////")
 numero_secreto = 98
 limite_tentativas = 3;
 rodada = 1
-while (rodada <= limite_tentativas):
-    print("Preparese para jogar, você tem 3 tentataivas para acerter o número, mortal")
+for rodada in range(1, limite_tentativas + 1 ):
+    print("Prepare-se para jogar, você tem 3 tentataivas para acerter o número, mortal")
     print("------------------------------------------------------------------------------")
-    print("Tentativa", rodada)
-
+    print("Tentativa {} de {}".format(rodada, limite_tentativas))
 
     chute = int(input("Digite um número: "))
     print("Você digitou ", chute)
@@ -25,4 +24,6 @@ while (rodada <= limite_tentativas):
             print("Seja menos ambicioso, chute mais baixo")
         elif(baixo_demais):
             print("Seja mais ambicioso, seu chute foi muito baixo")
-    rodada = rodada + 1
+
+
+print("Fim do jogo, mortal")
